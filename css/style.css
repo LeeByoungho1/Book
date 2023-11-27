@@ -4,6 +4,10 @@
 html,
 body {
     height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
 
 /** scrollBox **/
@@ -553,7 +557,7 @@ h2 {
     width: 500px;
     height: 500px;
     position: absolute;
-    left: 48%;
+    left: 49%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
     display: none;

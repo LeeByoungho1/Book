@@ -339,13 +339,13 @@ $(".firstBtn, #blackBg").on("click", function () {
 $(".chapterList .menu__item .menu__item-inner").on("mouseover mouseout", function (e) {
     var attrClass = e.type;
     var animation = this.children.namedItem("circleAnimation");
+    animation.setSpeed(4);
 
     if (attrClass == "mouseout") {
         animation.stop();
         $(animation).fadeOut();
     } else {
         $(animation).fadeIn();
-        animation.setSpeed(2);
         if (!animation.isPlaying) {
             animation.play();
         }
