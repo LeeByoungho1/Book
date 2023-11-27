@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+    <title>Book</title>
+    <link href="./img/logo2.png" rel="logo icon" type="image/x-icon">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/seik-style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.overscroll.js"></script>
+    <script type="text/javascript" src="js/jqfloat.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/6b24e13a02.js" crossorigin="anonymous"></script>
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- wow.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- lotties -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+    <!-- chapterScroll -->
+    <link rel="stylesheet" type="text/css" href="base.98fd6c19.css">
+    <script>document.documentElement.className = "js";
+
+        var supportsCssVars = function supportsCssVars() {
+            var e,
+                t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+        };
+
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body>
+    <div id="scrollBox">
+        <div class="wrap">
+            <div id="scrollBg"></div>
+            <div id="scene1" class="scene"></div>
+            <div id="scene2" class="scene"></div>
+            <div id="scene3" class="scene"></div>
+            <div id="scene4" class="scene"></div>
+            <div id="scene5" class="scene"></div>
+            <div id="scene6" class="scene"></div>
+            <div id="scene7" class="scene"></div>
+            <div id="scene8" class="scene"></div>
+            <div id="scene9" class="scene"></div>
+            <div id="scene10" class="scene"></div>
+            <div id="scene11" class="scene"></div>
+            <div id="scene12" class="scene"></div>
+            <div id="bg"></div>
+        </div>
+    </div>
+
+    <div id="blackBg"
+        style="position: fixed; left: 0; top: 0; background-color: #000; opacity: 0.3; width: 100vw; height: 100vw; transition: opacity 1s ease; cursor: url(./img/cursor/cursor-pointer.png) 10 15, auto;">
+    </div>
+
+    <!-- 처음 소개 글 -->
+    <div class="pageInfo">
+        <h1>마이크로 사이트 소개글</h1>
+        <h3>시각적 경험을 선사하는 잡지를 소개하는 웹사이트입니다.</h3>
+        <p>마우스를 드래그하여 자유롭게 이동하며, 12개의 다양한 챕터를 확인할 수 있습니다. ABOUT 버튼을 클릭하면 잡지에 관한 내용을 자세히 알 수 있고,
+            BUY NOW 버튼은 마우스 오버시 애니메이션과 함께 클릭하면 잡지를 구매할 수 있는 링크로 이동합니다. 페이지 하단의 손가락 버튼은 각 챕터로 빠르게 이동할
+            수 있는 편리한 챕터 리스트를 제공합니다. 색다른 잡지의 세계로 초대합니다.</p>
+
+        <!-- 처음시작버튼 -->
+        <div class="firstBtn">
+            <!-- <p><i class="fa-brands fa-golang"></i></p> -->
+            <p><i class="fa-solid fa-arrow-right"></i></p>
+            <div class="seachAnimationDiv">
+                <lottie-player id="seachAnimation" src="./json/serch.json"
+                    style="width: 80%; height: 80%; margin: auto;" autoplay loop>
+                </lottie-player>
+            </div>
+        </div>
+    </div>
+
+    <!-- 현재 챕터 내용 -->
+    <div class="chapterBox ">
+        <div style="display: block;">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel" style="font-size: 3rem; font-weight: 700; margin: 0;">
+            </h5>
+            <h1
+                style="font-size: 4rem; font-weight: 700; letter-spacing: -0.02em; margin: 0; z-index: 99; margin-bottom: 20px;">
+                THE SEARCH FOR WORK<br>HAPPINESS</h1>
+        </div>
+        <div style="position: relative;">
+            <h3 style="font-size: 30px; font-weight: 700; margin-bottom: 20px;">Anecdotes to help leaders keep
+                themeselves and their people happy and mentally healthy.</h3>
+            <p style="font-size: 25px;"></p>
+        </div>
+        <img src="./img/ch/sign.png" alt="챕터 이미지" style="position: absolute; left: 20px; top: 450px; z-index: -1;"
+            width="700px">
+    </div>
+
+    <!-- 이전버튼 -->
+    <div class="preBtn pnBtn" style="left: 30px;">
+        <p><i style="margin-right: 15px;" class="fa-solid fa-chevron-left"></i>PREV</p>
+        <div class="pnBtnAfter" style="left: 210px;">
+            <p><i style="margin-right: 15px;" class="fa-solid fa-chevron-left"></i>PREV</p>
+        </div>
+    </div>
+
+    <!-- 다음버튼 -->
+    <div class="nextBtn pnBtn" style="right: 30px;">
+        <p>NEXT<i style="margin-left: 15px;" class="fa-solid fa-chevron-right"></i></p>
+        <div class="pnBtnAfter" style="right: 210px;">
+            <p>NEXT<i style="margin-left: 15px;" class="fa-solid fa-chevron-right"></i></p>
+        </div>
+    </div>
+
+    <!-- 챕터 닫기 버튼 -->
+    <div class="chapterCloseBtn">
+        <i class="fa-regular fa-circle-xmark" style="cursor: url(img/cursor/cursor-pointer.png) 10 15, auto;
+            font-size: 70px; font-weight: bold; "></i>
+    </div>
+
+    <!-- 챕터 버튼 -->
+    <div class="open-button-bg">
+        <p id="about">ABOUT</p>
+        <a href="https://www.amazon.com/dp/B0BTRW3DD8" id="buy">BUY NOW</a>
+    </div>
+    <div class="open-button">
+        <p><i class="fa-solid fa-hand-point-up" style="pointer-events: none;"></i></p>
+    </div>
+
+    <!-- 챕터 리스트 -->
+    <div class="chapterList">
+        <div class="frame">
+            <h1 class="frame__title">SCROLL THROUGH CHAPTERS</h1>
+            <div class="frame__links" style="width: 800px; margin-top: 260px;">
+                <a class="frame__link close-button" aria-hidden="true">
+                    <p><i class="fa-solid fa-hand-point-up"></i></p>
+                </a>
+                <h3 style="font-size: 100px; font-weight: 700; margin-bottom: 20px; height: 250px; overflow: hidden;">
+                    THE<br>
+                    SEARCH<br>
+                    FOR WORK<br>
+                    HAPPINESS</h3>
+                <p style="font-size: 40px;"><i class="fa-solid fa-hand-pointer"
+                        style="transform: rotate(-15deg); margin-right: 30px; display: inline-block; color: #779389;"></i>CLICK
+                    TO READ CHAPTER</p>
+                <img src="./img/menu-default.png" alt="챕터 이미지"
+                    style="position: absolute; left: 100px; top: 110px; z-index: -1;" width="1000px">
+            </div>
+        </div>
+        <nav class="menu">
+            <div class="menu__item"><a class="menu__item-inner">01 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">02 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">03 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">04 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">05 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">06 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">07 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">08 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">09 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">10 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">11 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+            <div class="menu__item"><a class="menu__item-inner">12 <lottie-player id="circleAnimation" src="./json/circle3.json">
+            </lottie-player></a></div>
+        </nav>
+        <script src="js.00a46daa.js"></script>
+    </div>
+
+    <div class="about">
+        <nav class="menu">
+            <div class="menu__item">
+                <div class="section sectionTop" style="background-color: #9fb4ac;">
+                    <!-- <img src="./img/about/1.png" style="position: absolute; left: 5%; top: 0;"> -->
+                    <img src="./img/about/2.png" style="position: absolute; right: 5%; bottom: 0%;">
+                    <div>
+                        <!-- <img src="./img/book2.png" alt="잡지"> -->
+                    </div>
+                    <div style="width: 50%;">
+                        <h1>I NEVER SET OUT TO BE A LEADER.</h1>
+                        <h3>I’ve worked a lot of jobs for a lot of people, and along the way I noticed the type of
+                            people I loved to work for—and the ones I didn’t.</h3>
+                        <p>As a teenager, I worked <span class="underLine">anywhere</span> I could make money. In local
+                            restaurants. From fast food
+                            delivery to ice cream shops. From road work to tech support, I basically would work anywhere
+                            that gave me a chance.</p>
+                        <p>When I got my <span class="bold">first</span> job offer in Chicago, I was just a
+                            twenty-something kid from the swamps
+                            of Louisiana hoping to make it. Did I buy a one-way ticket to the coldest place I’d ever
+                            been?</p>
+                        <h4>Hell yes, I did.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <div class="section sectionBottom" style="background-color: #f7f8f3;">
+                    <div style="width: 50%;">
+                        <h1>I HAD TO LEAVE HOME TO BUILD A BETTER LIFE</h1>
+                        <p>So I picked up and left <span class="bold">home</span> for the promise of a better future,
+                            open to wherever that would lead me. I swapped sweltering Louisiana sunshine for the frigid
+                            temps of north Chicago, then the predictability of San Francisco’s foggy mornings, and,
+                            later, New York City’s gritty, fast-paced vibe.</p>
+                        <p>I seized <span class="underLine">every</span> single opportunity I could to learn, to try to
+                            get myself ahead of the game. I tried to emulate the qualities I admired <span
+                                class="bold">most</span> about my managers: the ones that felt most like the Southern
+                            kindness fed to me just as often as my mother’s gumbo back home. It wasn’t as tasty, but it
+                            sure was soothing to the soul.</p>
+                        <p>After a few years, I started finding myself in mentoring and managerial roles. I did my best
+                            to marry business acumen with <span class="underLine">kindness</span>, and soon learned just
+                            how unorthodox it was.</p>
+                        <p>I heard so many people with C-level titles blab about how we should create better “work-life
+                            balance,” while consistently asking their teams to stay late or make impossible sacrifices.
+                        </p>
+                        <!-- <p>Out of one corner of their mouth (and on social media), they’d proclaim how important mental health is, and how employees should take allllll the time they need to heal. Out of the other corner of their mouth, they’d demand that those same employees submit their timesheets to reflect the exact amount of time it took them to heal—by 5PM on Friday. In quarter-hour increments.</p> -->
+                        <h5>No exceptions.</h5>
+                    </div>
+                    <div>
+                        <!-- <img src="./img/book.png" alt="잡지"> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <div class="aboutBottom">
+                    <div class="top">
+                        <h1 class="number-counter" data-count-from="0" data-count-to="16020" data-count-speed="4005">
+                            16,020</h1>
+                        <p>words fill thie walls of the book</p>
+                    </div>
+                    <div class="bottom">
+                        <div>
+                            <h2 id="p1" class="number-counter" data-count-from="0" data-count-to="1039"
+                                data-count-speed="259">1,039</h2>
+                            <p>copies solde</p>
+                        </div>
+                        <div>
+                            <h2 id="p2" class="number-counter" data-count-from="0" data-count-to="28"
+                                data-count-speed="7">28</h2>
+                            <p>custom illustrated scenes</p>
+                        </div>
+                        <div>
+                            <h2 id="p3" class="number-counter" data-count-from="0" data-count-to="160"
+                                data-count-speed="40">160</h2>
+                            <p>pages in the book</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <i class="fa-regular fa-circle-xmark" style="position: fixed; right: 2%; top: 2%; 
+            cursor: url(img/cursor/cursor-pointer.png) 10 15, auto;
+            font-size: 70px; font-weight: bold; "></i>
+            <img id="book" src="./img/book2.png" alt="잡지" style="position: absolute; left: 5%; top: 0; width: 40%;">
+        </nav>
+    </div>
+
+    <lottie-player id="buyAnimation" src="./json/buy.json"
+        style="width:700px; height: 700px; position: fixed; left: calc(50% - 350px); top: calc(50% - 400px); display: none;">
+    </lottie-player>
+
+    <lottie-player id="welcomeAnimation" src="./json/welcome.json"
+        style="width:700px; height: 700px; position: fixed; left: calc(50% - 350px); top: -10%; ">
+    </lottie-player>
+
+    <script type="text/javascript">
+        overScroll();
+    </script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
