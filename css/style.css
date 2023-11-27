@@ -484,9 +484,9 @@ h2 {
 
 .pageInfo {
     font-family: 'GmarketSansMedium';
-    width: 900px;
+    width: 1000px;
     margin: 0 auto 100px;
-    height: 650px;
+    height: 700px;
     bottom: -150%;
     /* bottom: 10%; */
     padding: 50px;
@@ -497,23 +497,6 @@ h2 {
     background-size: cover;
     transition: bottom 1.5s ease;
     text-align: left;
-}
-
-.pageInfo h1 {
-    margin-top: 30px;
-    font-family: 'GmarketSansBold';
-    text-align: center;
-}
-
-.pageInfo h3 {
-    margin: 40px 30px 20px;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.pageInfo p {
-    margin: 0 30px;
-    font-size: 25px;
 }
 
 .chapterCloseBtn {
@@ -546,7 +529,7 @@ h2 {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 50%);
     cursor: url(../img/cursor/cursor-pointer.png) 10 15, auto;
     border-radius: 100%;
     transition: width 1s ease, height 1s ease, left;

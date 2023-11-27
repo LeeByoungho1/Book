@@ -13,8 +13,7 @@ const animateCSS = (element, animation, delay) => {
 $("#bg").css({ "clip-path": "circle(70.7% at 50% 50%)" })
 animateCSS(".open-button-bg", "animate__zoomOut")
 animateCSS(".open-button", "animate__zoomOut")
-$(".pageInfo").css("bottom", "10%")
-// $(".firstBtn").css("bottom", "10%")
+$(".pageInfo").css("bottom", "5%")
 
 // 마우스 커서 효과
 $("#scrollBg, #bg").on("mouseup", function () {
