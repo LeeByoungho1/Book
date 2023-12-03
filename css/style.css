@@ -536,7 +536,7 @@ h2 {
     transform: translate(-50%, 50%);
     cursor: url(../img/cursor/cursor-pointer.png) 10 15, auto;
     border-radius: 100%;
-    transition: width 1s ease, height 1s ease, left;
+    transition: width 1s ease, height 1s ease;
 }
 
 .firstBtn:hover {
